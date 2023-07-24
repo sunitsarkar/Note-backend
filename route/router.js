@@ -21,7 +21,7 @@ router.post('/', async (req,res)=> {
     try {
         const { email , password } = req.body;
         if(!email || !password){
-            return res.status(404).json({error : "plz Filled th data "})
+            return res.status(404).json({error : "plz Filled the data "})
         }
 
         const userlogin = await User.findOne({ email: email });
